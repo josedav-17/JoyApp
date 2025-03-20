@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaHome, FaInfoCircle, FaTools, FaGift, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo.png";
 
 const Header = () => {
@@ -8,9 +9,9 @@ const Header = () => {
   const [animate, setAnimate] = useState(false);
 
   const messages = [
-    "Contáctanos al +1234567890",
-    "Ventas al por mayor y al detal",
-    "Servicio rápido y confiable"
+    "📞 Contáctanos al +1234567890",
+    "💼 Ventas al por mayor y al detal",
+    "⚡ Servicio rápido y confiable"
   ];
 
   useEffect(() => {
@@ -51,41 +52,59 @@ const Header = () => {
 
       {/* Header principal */}
       <div className="bg-[#3DD1F2] shadow-md w-full flex flex-col md:items-center p-4">
-        <div className="w-full flex items-center justify-between md:flex-col">
-          {/* Botón de menú en móviles (Izquierda) */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-white text-xl">
-              ☰
-            </button>
-          </div>
+        <div className="w-full flex items-center justify-between">
+          {/* Botón de menú en móviles */}
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 text-white text-2xl">
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
 
           {/* Logo centrado */}
-          <div className="flex-1 flex justify-center">
-            <img src={logo} alt="Logo" className="h-12" />
+          <div className="flex-1 flex justify-center items-center">
+            <img src={logo} alt="Logo" className="h-16 max-h-16 w-auto" />
           </div>
 
-          {/* Espacio vacío para mantener alineado el botón */}
-          <div className="md:hidden w-8"></div>
+          {/* Espacio vacío para mantener alineado el botón en móvil */}
+          <div className="md:hidden w-10"></div>
         </div>
 
-        {/* Menú en escritorio */}
-        <nav className="hidden md:flex space-x-6 mt-2">
-          <a href="#home" onClick={handleLinkClick} className="text-white hover:underline">Inicio</a>
-          <a href="#about" onClick={handleLinkClick} className="text-white hover:underline">Sobre Nosotros</a>
-          <a href="#services" onClick={handleLinkClick} className="text-white hover:underline">Servicios</a>
-          <a href="#benefits" onClick={handleLinkClick} className="text-white hover:underline">Beneficios</a>
-          <a href="#contact" onClick={handleLinkClick} className="text-white hover:underline">Contacto</a>
+        {/* Menú en escritorio con botones */}
+        <nav className="hidden md:flex space-x-4 mt-2">
+          <a href="#home" onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#3DD1F2] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
+            <FaHome /> Inicio
+          </a>
+          <a href="#about" onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#3DD1F2] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
+            <FaInfoCircle /> Sobre Nosotros
+          </a>
+          <a href="#services" onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#3DD1F2] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
+            <FaTools /> Servicios
+          </a>
+          <a href="#benefits" onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#3DD1F2] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
+            <FaGift /> Beneficios
+          </a>
+          <a href="#contact" onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#3DD1F2] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
+            <FaEnvelope /> Contacto
+          </a>
         </nav>
       </div>
 
-      {/* Menú desplegable en móviles */}
+      {/* Menú desplegable en móviles con botones */}
       {isOpen && (
         <div className="md:hidden bg-[#3DD1F2] shadow-lg p-4 w-full text-center">
-          <a href="#home" onClick={handleLinkClick} className="block py-2 text-white">Inicio</a>
-          <a href="#about" onClick={handleLinkClick} className="block py-2 text-white">Sobre Nosotros</a>
-          <a href="#services" onClick={handleLinkClick} className="block py-2 text-white">Servicios</a>
-          <a href="#benefits" onClick={handleLinkClick} className="block py-2 text-white">Beneficios</a>
-          <a href="#contact" onClick={handleLinkClick} className="block py-2 text-white">Contacto</a>
+          <a href="#home" onClick={handleLinkClick} className="block py-2 mb-2 text-white bg-[#0077B6] rounded-full px-4 flex items-center justify-center gap-2">
+            <FaHome /> Inicio
+          </a>
+          <a href="#about" onClick={handleLinkClick} className="block py-2 mb-2 text-white bg-[#0077B6] rounded-full px-4 flex items-center justify-center gap-2">
+            <FaInfoCircle /> Sobre Nosotros
+          </a>
+          <a href="#services" onClick={handleLinkClick} className="block py-2 mb-2 text-white bg-[#0077B6] rounded-full px-4 flex items-center justify-center gap-2">
+            <FaTools /> Servicios
+          </a>
+          <a href="#benefits" onClick={handleLinkClick} className="block py-2 mb-2 text-white bg-[#0077B6] rounded-full px-4 flex items-center justify-center gap-2">
+            <FaGift /> Beneficios
+          </a>
+          <a href="#contact" onClick={handleLinkClick} className="block py-2 text-white bg-[#0077B6] rounded-full px-4 flex items-center justify-center gap-2">
+            <FaEnvelope /> Contacto
+          </a>
         </div>
       )}
     </header>
