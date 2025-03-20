@@ -31,7 +31,7 @@ const Header = () => {
     }, 10000);
     
     return () => clearInterval(interval);
-  }, []);
+  }, [messages.length]);
 
   const handleLinkClick = () => {
     setShowSubheader(false);
