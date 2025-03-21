@@ -54,18 +54,18 @@ const Header = () => {
       <div className="bg-[#3DD1F2] shadow-md w-full flex items-center justify-between px-6 py-4">
         
         {/* Logo a la izquierda */}
-        <div className="flex items-center">
-          <img src={logo} alt="Logo" className="h-20 w-auto" />
-          <span className="text-2xl font-bold italic text-white drop-shadow-md ml-3 font-mono">
-            Tecnología que despierta alegrías
-          </span>
-        </div>
+        <div className="flex flex-col-reverse md:flex-row items-center">
+  <span className="text-xl text-center md:text-2xl font-bold italic text-white drop-shadow-md mt-2 md:mt-0 font-mono">
+    Tecnología que despierta alegrías
+  </span>
+  <img src={logo} alt="Logo" className="h-20 w-auto md:ml-3" />
+</div>
 
 
         {/* Menú en escritorio con botones */}
         <nav className="hidden md:flex space-x-4">
           {[
-            { href: "#home", icon: <FaHome />, text: "Inicio" },
+            { href: "", icon: <FaHome />, text: "Inicio" },
             { href: "#about", icon: <FaInfoCircle />, text: "Sobre Nosotros" },
             { href: "#services", icon: <FaTools />, text: "Servicios" },
             { href: "#benefits", icon: <FaGift />, text: "Beneficios" },
@@ -87,7 +87,7 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden bg-[#3DD1F2] shadow-lg p-4 w-full text-center">
           {[
-            { href: "#home", icon: <FaHome />, text: "Inicio" },
+            { href: "", icon: <FaHome />, text: "Inicio" },
             { href: "#about", icon: <FaInfoCircle />, text: "Sobre Nosotros" },
             { href: "#services", icon: <FaTools />, text: "Servicios" },
             { href: "#benefits", icon: <FaGift />, text: "Beneficios" },

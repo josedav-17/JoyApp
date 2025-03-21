@@ -8,17 +8,17 @@ const Contact = () => {
       }}>
       <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-8">Contáctanos</h2>
 
-      <div className="w-full max-w-4xl bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col md:flex-row gap-10">
+      <div className="w-full max-w-4xl bg-gray-800 p-6 shadow-lg flex flex-col md:flex-row gap-10 sm:rounded-none md:rounded-lg">
         {/* Formulario */}
         <div className="w-full md:w-1/2">
           <form className="flex flex-col">
-            <label className="mb-2 font-semibold" htmlFor="name">Nombre:</label>
+            <label className="mb-2 font-semibold text-white" htmlFor="name">Nombre:</label>
             <input className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none" type="text" id="name" placeholder="Tu nombre" required />
 
-            <label className="mb-2 font-semibold" htmlFor="email">Correo Electrónico:</label>
+            <label className="mb-2 font-semibold text-white" htmlFor="email">Correo Electrónico:</label>
             <input className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none" type="email" id="email" placeholder="Tu correo" required />
 
-            <label className="mb-2 font-semibold" htmlFor="message">Mensaje:</label>
+            <label className="mb-2 font-semibold text-white" htmlFor="message">Mensaje:</label>
             <textarea className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none" id="message" rows="4" placeholder="Tu mensaje" required></textarea>
 
             <button className="bg-yellow-500 text-white font-bold px-4 py-3 rounded transition duration-300 hover:bg-yellow-600">
@@ -30,7 +30,7 @@ const Contact = () => {
         {/* Google Maps */}
         <div className="w-full md:w-1/2">
           <h3 className="text-lg font-bold mb-2 text-yellow-400">Nuestra Ubicación</h3>
-          <div className="w-full h-64 rounded-lg overflow-hidden shadow-lg">
+          <div className="w-full h-64 overflow-hidden shadow-lg sm:rounded-none md:rounded-lg">
             <iframe
               title="Ubicación"
               className="w-full h-full border-0"

@@ -1,19 +1,30 @@
 {
   "files": {
-    "main.css": "/JoyApp/static/css/main.bf8f3620.css",
-    "main.js": "/JoyApp/static/js/main.0ddd157e.js",
+    "main.css": "/JoyApp/static/css/main.331f9474.css",
+    "main.js": "/JoyApp/static/js/main.f27129e8.js",
+    "static/media/FUTURISTAS1.mp4": "/JoyApp/static/media/FUTURISTAS1.79a7460220056d091940.mp4",
     "static/media/FUTURISTAS.mp4": "/JoyApp/static/media/FUTURISTAS.4529b674b2f35d357a7a.mp4",
-    "static/media/logo.png": "/JoyApp/static/media/logo.37b8029aceb093c77e42.png",
+    "static/media/FUTURISTAS2.mp4": "/JoyApp/static/media/FUTURISTAS2.8ec968b561c14b7eae14.mp4",
+    "static/media/plazas.jpg": "/JoyApp/static/media/plazas.bfb92434d61c31b61840.jpg",
+    "static/media/logo.png": "/JoyApp/static/media/logo.9555acdd62f03e985667.png",
+    "static/media/emprendedores.jpg": "/JoyApp/static/media/emprendedores.9a4a2166c26c02bc9571.jpg",
+    "static/media/wave.svg": "/JoyApp/static/media/wave.cc23353505dd2d69f0e948ea20b50b68.svg",
+    "static/media/familia.jpg": "/JoyApp/static/media/familia.bffe89677cd4a50535e0.jpg",
+    "static/media/turismo1.jpg": "/JoyApp/static/media/turismo1.69e0052010d72de5c9f0.jpg",
+    "static/media/centros.jpg": "/JoyApp/static/media/centros.0ee8a6d2031fa4cca0b0.jpg",
+    "static/media/recreacion.jpg": "/JoyApp/static/media/recreacion.d3c6568446b61754a729.jpg",
+    "static/media/parejas.jpg": "/JoyApp/static/media/parejas.2dfafd7f49d150cbd697.jpg",
+    "static/media/eventos.jpg": "/JoyApp/static/media/eventos.44d0e71902987a1d46d9.jpg",
     "static/media/slick.svg": "/JoyApp/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/JoyApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/JoyApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/JoyApp/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/JoyApp/index.html",
-    "main.bf8f3620.css.map": "/JoyApp/static/css/main.bf8f3620.css.map",
-    "main.0ddd157e.js.map": "/JoyApp/static/js/main.0ddd157e.js.map"
+    "main.331f9474.css.map": "/JoyApp/static/css/main.331f9474.css.map",
+    "main.f27129e8.js.map": "/JoyApp/static/js/main.f27129e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf8f3620.css",
-    "static/js/main.0ddd157e.js"
+    "static/css/main.331f9474.css",
+    "static/js/main.f27129e8.js"
   ]
 }
