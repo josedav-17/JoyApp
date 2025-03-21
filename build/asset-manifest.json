@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/JoyApp/static/css/main.b3154012.css",
-    "main.js": "/JoyApp/static/js/main.1ab10402.js",
+    "main.css": "/JoyApp/static/css/main.bf8f3620.css",
+    "main.js": "/JoyApp/static/js/main.0ddd157e.js",
+    "static/media/FUTURISTAS.mp4": "/JoyApp/static/media/FUTURISTAS.4529b674b2f35d357a7a.mp4",
     "static/media/logo.png": "/JoyApp/static/media/logo.37b8029aceb093c77e42.png",
     "static/media/slick.svg": "/JoyApp/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/JoyApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/JoyApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/JoyApp/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/JoyApp/index.html",
-    "main.b3154012.css.map": "/JoyApp/static/css/main.b3154012.css.map",
-    "main.1ab10402.js.map": "/JoyApp/static/js/main.1ab10402.js.map"
+    "main.bf8f3620.css.map": "/JoyApp/static/css/main.bf8f3620.css.map",
+    "main.0ddd157e.js.map": "/JoyApp/static/js/main.0ddd157e.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3154012.css",
-    "static/js/main.1ab10402.js"
+    "static/css/main.bf8f3620.css",
+    "static/js/main.0ddd157e.js"
   ]
 }

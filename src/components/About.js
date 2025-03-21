@@ -1,9 +1,17 @@
 import React from "react";
 import { FaLightbulb, FaBullseye, FaFlag } from "react-icons/fa";
+import BackgroundSVG from "../assets/wave.svg";
 
 const About = () => {
   return (
-    <section id="about" className="bg-gray-900 text-white text-gray-900 py-11 scroll-mt-20 min-h-screen justify-center items-center">
+    <section id="about" className="bg-gray-500 text-white text-gray-900 py-11 scroll-mt-20 min-h-screen justify-center items-center"
+    style={{
+      backgroundImage: `url(${BackgroundSVG})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    
+    >
       <div className="container mx-auto px-6 max-w-6xl text-center">
         
         {/* Título y descripción */}
