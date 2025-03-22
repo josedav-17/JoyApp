@@ -4,8 +4,9 @@ import BackgroundSVG from "../assets/wave.svg";
 
 const About = () => {
   return (
-    <section id="about" className="bg-gray-500 text-white text-gray-900 py-11 scroll-mt-20 min-h-screen justify-center items-center"
+    <section id="about" className="text-white text-gray-900 py-11 scroll-mt-20 min-h-screen justify-center items-center"
     style={{
+      backgroundColor: "#E42B2F",
       backgroundImage: `url(${BackgroundSVG})`,
       backgroundSize: "cover",
       backgroundPosition: "center",

@@ -1,15 +1,16 @@
-import React from "react";
-import mallImage from "../assets/centros.jpg"; 
-import emprende from "../assets/emprendedores.jpg"; 
-import ventos from "../assets/eventos.jpg"; 
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import mallImage from "../assets/centros.jpg";
+import emprende from "../assets/emprendedores.jpg";
+import ventos from "../assets/eventos.jpg";
+import BackgroundSVG from "../assets/wave.svg";
 
-const phoneNumber = "+573046136840"; 
+const phoneNumber = "+573046136840";
 
 const services = [
   {
     title: "Centros Comerciales",
-    description:
-      "Transforma tu espacio en un punto de referencia con tecnología innovadora.",
+    description: "Con nuestras herramientas, podrás ofrecer a tus visitantes una experiencia única, aumentar el flujo de personas y mejorar el tiempo de permanencia, todo mientras transformas tu espacio en un referente en innovación.",
     image: mallImage,
     benefits: [
       "Mayor afluencia de visitantes.",
@@ -20,8 +21,7 @@ const services = [
   },
   {
     title: "Para Emprendedores",
-    description:
-      "Convierte la tecnología en tu fuente de ingresos con un negocio rentable.",
+    description: "Aprovecha las herramientas tecnológicas más avanzadas para ofrecer experiencias interactivas que cautiven a los clientes. Con este enfoque innovador, podrás crear una fuente de ingresos constante y fortalecer tu presencia en el mercado.",
     image: emprende,
     benefits: [
       "Oportunidad de negocio con tecnología innovadora.",
@@ -32,8 +32,7 @@ const services = [
   },
   {
     title: "Eventos Especiales",
-    description:
-      "Dale un toque único a tu evento con soluciones tecnológicas interactivas.",
+    description: "Transforma cada evento en una experiencia inolvidable utilizando herramientas innovadoras que capturan la atención y crean un ambiente interactivo, asegurando que cada detalle quede grabado en la memoria de los asistentes.",
     image: ventos,
     benefits: [
       "Impacto visual y experiencia única.",
@@ -44,39 +43,67 @@ const services = [
   },
 ];
 
+const motionVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeInOut", delay: index * 0.1 },
+  }),
+};
+
 const Services = () => {
+  const sectionRef = useRef(null);
 
   const handleWhatsApp = (serviceName) => {
-    const message = encodeURIComponent(`Quiero más informaciòn - ${serviceName}`);
+    const message = encodeURIComponent(`Quiero más información - ${serviceName}`);
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(url, "_blank"); // Abre WhatsApp en una nueva pestaña
+    window.open(url, "_blank");
   };
 
-
   return (
-    <section id="services" className="bg-gray-700 min-h-screen flex flex-col justify-center items-center text-gray-900 scroll-mt-20"
+    <section
+      ref={sectionRef}
+      id="services"
+      className="text-white text-gray-900 py-11 scroll-mt-20 min-h-screen justify-center items-center"
       style={{
-        backgroundColor: "rgba(192, 238, 248, 0.3)",
+        backgroundColor: "#F2911B",
+        backgroundImage: `url(${BackgroundSVG})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <h2 className="text-3xl font-extrabold text-center text-[#3DD1F2] mb-8">
-        Nuestros Servicios
-      </h2>
-      <div className="container mx-auto flex flex-wrap justify-center gap-6">
+      {/* Título */}
+      <div className="w-full flex justify-center mb-6">
+        <h2 className="text-3xl font-extrabold text-center text-white">
+          Nuestros Servicios
+        </h2>
+      </div>
+
+      {/* Contenido de los servicios */}
+      <div className="container mx-auto flex flex-wrap justify-center gap-6 mt-4">
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden w-[340px] flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-lg"
+            className="bg-white border border-gray-200 rounded-xl shadow-md w-[360px] flex flex-col transform transition hover:scale-105 hover:shadow-lg"
+            initial="hidden"
+            whileInView="visible"
+            custom={index}
+            variants={motionVariants}
+            viewport={{ once: true }}
           >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-40 object-cover"
-            />
+            {/* Imagen con bordes redondeados y padding */}
+            <div className="overflow-hidden p-2">
+              <img
+                src={service.image}
+                alt={`Servicio de ${service.title}`}
+                className="w-full h-32 object-cover rounded-xl" // Imagen con bordes redondeados
+              />
+            </div>
             <div className="p-4 flex flex-col flex-grow">
-              <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
-              <p className="text-sm mt-1 text-gray-600">{service.description}</p>
-              <ul className="mt-3 space-y-1 text-xs text-gray-800">
+              <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+              <p className="text-sm mt-2 text-gray-600">{service.description}</p>
+              <ul className="mt-3 space-y-1 text-sm text-gray-800">
                 {service.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-center">
                     ✅ <span className="ml-2">{benefit}</span>
@@ -85,14 +112,14 @@ const Services = () => {
               </ul>
             </div>
             <div className="p-4 flex justify-center">
-               <button
+              <button
                 onClick={() => handleWhatsApp(service.title)}
-                className="w-[80%] bg-[#FF0347] text-white font-semibold py-2 rounded-lg text-sm transition duration-300 hover:bg-[#D91A73] shadow-md"
+                className="w-[80%] bg-[#178ACD] text-white font-semibold py-2 rounded-lg text-sm transition hover:bg-[#0BB3D9] shadow-md"
               >
                 {service.buttonText}
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

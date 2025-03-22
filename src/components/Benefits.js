@@ -1,12 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-
 import plazas from "../assets/plazas.jpg"; 
 import turismo from "../assets/turismo1.jpg"; 
 import familia from "../assets/familia.jpg"; 
 import parejas from "../assets/parejas.jpg"; 
 import recrea from "../assets/recreacion.jpg"; 
-
 
 const benefits = [
   {
@@ -43,7 +41,7 @@ const benefits = [
     title: "Recreación Sana para Parejas",
     description: "Ideal para que parejas disfruten de momentos juntos en un ambiente acogedor.",
     impact: "💑 Ocio saludable y mayor convivencia.",
-    image:  parejas,
+    image: parejas,
   },
 ];
 
@@ -51,10 +49,10 @@ const Benefits = () => {
   const settings = {
     dots: true,
     infinite: true,
-    arrows: false,
-    speed: 600,
+    arrows: true,
+    speed: 700,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: false,
@@ -72,30 +70,57 @@ const Benefits = () => {
         },
       },
     ],
+    appendDots: dots => (
+      <div style={{ marginTop: "2rem", minHeight: "50px" }}> {/* Aumentamos la altura del contenedor */}
+        <ul style={{ margin: "8px 0", display: "flex", justifyContent: "center" }}> 
+          {dots} 
+        </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div className="w-3 h-3 mx-1 bg-gray-300 rounded-full transition-all hover:bg-[#FF0347]" />
+    ),
   };
 
+  // bg-gray-500 text-white text-gray-900 py-11 scroll-mt-20 min-h-screen justify-center items-cente
+
   return (
-    <div id="benefits" className="min-h-screen flex flex-col justify-center items-center text-gray-900 scroll-mt-20"
-    style={{
-      backgroundColor: "rgba(192, 238, 248, 0.3)",
-    }}
+<section id="benefits" className="flex flex-col scroll-mt-10 justify-center py-8 min-h-[100vh] items-center text-gray-900">
+  <h2 className="text-3xl font-extrabold text-center text-[#3DD1F2]">
+    Beneficios de Nuestros Servicios
+  </h2>
+
+  <div className="w-full max-w-7xl px-4 md:px-6 relative">
+    <Slider
+      {...settings}
+      className="relative"
+      appendDots={(dots) => (
+        <div className="slick-dots mt-4">
+          <ul style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+            {dots}
+          </ul>
+        </div>
+      )}
     >
-      <h2 className="text-4xl font-bold mb-7 text-center text-[#FF0347]">Beneficios de Nuestros Servicios</h2>
-      <div className="w-full max-w-7xl px-7">
-        <Slider {...settings}>
-          {benefits.map((benefit, index) => (
-            <div key={index} className="p-3 sm:p-4">
-              <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-5 flex flex-col items-center text-center min-h-[360px] sm:min-h-[380px]">
-                <img src={benefit.image} alt={benefit.title} className="w-full h-40 sm:h-44 object-cover rounded-lg mb-2 sm:mb-3" />
-                <h3 className="text-lg font-semibold text-[#333]">{benefit.title}</h3>
-                <p className="mt-2 text-sm text-gray-600 flex-1">{benefit.description}</p>
-                <p className="mt-2 sm:mt-3 font-medium text-[#F2A81D]">{benefit.impact}</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </div>
+      {benefits.map((benefit, index) => (
+        <div key={index} className="p-2">
+          <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] min-h-[380px] md:min-h-[420px] lg:min-h-[460px]">
+            <img
+              src={benefit.image}
+              alt={benefit.title}
+              className="w-full h-40 md:h-44 object-cover rounded-lg mb-2"
+            />
+            <h3 className="text-lg font-semibold text-[#333]">{benefit.title}</h3>
+            <p className="mt-2 text-sm text-gray-600 flex-1 leading-tight">{benefit.description}</p>
+            <p className="mt-3 font-medium text-[#F2A81D]">{benefit.impact}</p>
+          </div>
+        </div>
+      ))}
+    </Slider>
+  </div>
+</section>
+
+
   );
 };
 

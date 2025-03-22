@@ -40,47 +40,59 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed w-full z-50">
+    <header className="fixed w-full z-50 bg-[#178ACD] shadow-md">
       {/* Subheader con mensajes animados */}
       {showSubheader && (
-        <div className="bg-[#F2A81D] text-white text-sm text-center w-full py-3">
+        <div className="bg-[#F2A81D] text-white text-lg font-bold text-center w-full py-3 shadow-md">
           <p className={`transition-all duration-500 ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}>
             {messages[messageIndex]}
           </p>
         </div>
       )}
 
-      {/* Header principal alineado en una sola fila */}
-      <div className="bg-[#3DD1F2] shadow-md w-full flex items-center justify-between px-6 py-4">
+      {/* Header principal */}
+      <div className="flex flex-col md:flex-row items-center justify-between px-6 pt-2 pb-0 relative">
+
+
         
-        {/* Logo a la izquierda */}
-        <div className="flex flex-col-reverse md:flex-row items-center">
-  <span className="text-xl text-center md:text-2xl font-bold italic text-white drop-shadow-md mt-2 md:mt-0 font-mono">
-    Tecnología que despierta alegrías
-  </span>
-  <img src={logo} alt="Logo" className="h-20 w-auto md:ml-3" />
-</div>
+        {/* Logo y slogan en PC */}
+        <div className="md:flex md:items-center md:gap-4">
 
+          {/* Logo centrado en móviles, alineado a la izquierda en PC */}
+          <div className="flex-1 flex justify-center md:justify-start">
+            <img src={logo} alt="Logo" className="h-13 w-auto max-w-[7.75rem]" />
+          </div>
+          
+          {/* Slogan alineado a la derecha en PC */}
+          <div className="hidden md:block text-lg font-bold italic text-white">
+            ✨ Tecnología que despierta alegrías ✨
+          </div>
+        </div>
 
-        {/* Menú en escritorio con botones */}
+        {/* Botón de menú alineado a la derecha en la misma línea en móviles */}
+        <button onClick={() => setIsOpen(!isOpen)} className="absolute right-6 top-4 md:hidden text-white text-2xl p-2">
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        {/* Slogan en móviles (bajo el logo) */}
+        <div className="md:hidden text-lg font-bold italic text-white text-center mt-2">
+          ✨ Tecnología que despierta alegrías ✨
+        </div>
+
+        {/* Menú en escritorio */}
         <nav className="hidden md:flex space-x-4">
           {[
             { href: "", icon: <FaHome />, text: "Inicio" },
-            { href: "#about", icon: <FaInfoCircle />, text: "Sobre Nosotros" },
             { href: "#services", icon: <FaTools />, text: "Servicios" },
             { href: "#benefits", icon: <FaGift />, text: "Beneficios" },
+            { href: "#about", icon: <FaInfoCircle />, text: "Sobre Nosotros" },
             { href: "#contact", icon: <FaEnvelope />, text: "Contacto" }
           ].map(({ href, icon, text }) => (
-            <a key={href} href={href} onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#3DD1F2] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
+            <a key={href} href={href} onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#178ACD] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
               {icon} {text}
             </a>
           ))}
         </nav>
-
-        {/* Botón de menú en móvil */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-white text-2xl">
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
       </div>
 
       {/* Menú desplegable en móviles */}
@@ -93,7 +105,7 @@ const Header = () => {
             { href: "#benefits", icon: <FaGift />, text: "Beneficios" },
             { href: "#contact", icon: <FaEnvelope />, text: "Contacto" }
           ].map(({ href, icon, text }) => (
-            <a key={href} href={href} onClick={handleLinkClick} className="block py-2 mb-2 text-white bg-[#0077B6] rounded-full px-4 flex items-center justify-center gap-2">
+            <a key={href} href={href} onClick={handleLinkClick} className="block py-2 mb-2 text-white bg-[#178ACD] rounded-full px-4 flex items-center justify-center gap-2">
               {icon} {text}
             </a>
           ))}

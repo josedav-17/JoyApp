@@ -2,10 +2,7 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="min-h-screen flex flex-col justify-center items-center text-gray-900 scroll-mt-20"
-      style={{
-        backgroundColor: "rgba(192, 238, 248, 0.3)",
-      }}>
+    <section id="contact" className="min-h-screen flex flex-col justify-center items-center text-gray-900 scroll-mt-20">
       <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-8">Contáctanos</h2>
 
       <div className="w-full max-w-4xl bg-gray-800 p-6 shadow-lg flex flex-col md:flex-row gap-10 sm:rounded-none md:rounded-lg">
