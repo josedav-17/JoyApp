@@ -9,7 +9,7 @@ const phoneNumber = "+573014168993";
 
 const services = [
   {
-    title: "Centros Comerciales",
+    title: "Joys para Centros Comerciales",
     description: "Los centros comerciales de hoy deben ofrecer algo más que compras: deben brindar experiencias memorables. Nuestros equipos tecnológicos crean un ambiente innovador que atrae visitantes, aumenta su tiempo de permanencia y mejora la experiencia del cliente.",
     image: mallImage,
     benefits: [
@@ -20,7 +20,7 @@ const services = [
     buttonText: "Descubre más",
   },
   {
-    title: "Para Emprendedores",
+    title: "Joys ara Emprendedores",
     description: "¿Buscas una oportunidad de negocio rentable y con alta demanda? Con JOY para Emprendedores, puedes alquilar nuestros equipos tecnológicos y generar ingresos pasivos en un sector en constante crecimiento. Te brindamos todo el respaldo y asesoría para que conviertas tu pasión en un negocio exitoso.",
     image: emprende,
     benefits: [
@@ -31,7 +31,7 @@ const services = [
     buttonText: "Emprende ahora",
   },
   {
-    title: "Eventos Especiales",
+    title: "Joys para Eventos Especiales",
     description: "Dale un toque único a tu evento con nuestras soluciones tecnológicas interactivas. Ya sea una feria, festival, evento corporativo o lanzamiento de marca, nuestros equipos garantizan un impacto visual inolvidable y una experiencia innovadora para los asistentes.",
     image: ventos,
     benefits: [
@@ -56,7 +56,7 @@ const Services = () => {
   const sectionRef = useRef(null);
 
   const handleWhatsApp = (serviceName) => {
-    const message = encodeURIComponent(`Quiero más información - ${serviceName}`);
+    const message = encodeURIComponent(`Hola, quiero más información sobre ${serviceName}`);
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, "_blank");
   };

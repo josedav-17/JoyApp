@@ -19,11 +19,10 @@ const Contact = () => {
     e.preventDefault();
 
     const message = `
-      *Requiero Informaciòn* 📩
-
-      *Nombre*: ${formData.name}
-      *Correo*: ${formData.email}
-      *Mensaje*: ${formData.message}
+      *Requiero mas informaciòn sobre sus servicios y productos* 📩
+      Nombre: ${formData.name}
+      Correo: ${formData.email}
+      Mensaje: ${formData.message}
     `;
 
 

@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/JoyApp/static/css/main.8ab005e1.css",
+    "main.js": "/JoyApp/static/js/main.858ac69d.js",
+    "static/media/FUTURISTAS1.mp4": "/JoyApp/static/media/FUTURISTAS1.79a7460220056d091940.mp4",
+    "static/media/FUTURISTAS4.mp4": "/JoyApp/static/media/FUTURISTAS4.8675034353bdee755405.mp4",
+    "static/media/FUTURISTAS.mp4": "/JoyApp/static/media/FUTURISTAS.4529b674b2f35d357a7a.mp4",
+    "static/media/FUTURISTAS5.mp4": "/JoyApp/static/media/FUTURISTAS5.def3d0713c087fb98baa.mp4",
+    "static/media/FUTURISTAS2.mp4": "/JoyApp/static/media/FUTURISTAS2.8ec968b561c14b7eae14.mp4",
+    "static/media/FUTURISTAS3.mp4": "/JoyApp/static/media/FUTURISTAS3.5be82a9d3da1a1ab2e93.mp4",
+    "static/media/fechas1.jpg": "/JoyApp/static/media/fechas1.c0283f0d94f1006fe60f.jpg",
+    "static/media/centros1.jpg": "/JoyApp/static/media/centros1.2b84d6e3054862f74952.jpg",
+    "static/media/logo.png": "/JoyApp/static/media/logo.a7f028b5d7adfec867c9.png",
+    "static/media/plazas.jpg": "/JoyApp/static/media/plazas.bfb92434d61c31b61840.jpg",
+    "static/media/emprendedores1.jpg": "/JoyApp/static/media/emprendedores1.98efcd94f657c46a7ab8.jpg",
+    "static/media/wave.svg": "/JoyApp/static/media/wave.cc23353505dd2d69f0e948ea20b50b68.svg",
+    "static/media/familia.jpg": "/JoyApp/static/media/familia.bffe89677cd4a50535e0.jpg",
+    "static/media/turismo1.jpg": "/JoyApp/static/media/turismo1.69e0052010d72de5c9f0.jpg",
+    "static/media/recreacion.jpg": "/JoyApp/static/media/recreacion.d3c6568446b61754a729.jpg",
+    "static/media/parejas.jpg": "/JoyApp/static/media/parejas.2dfafd7f49d150cbd697.jpg",
+    "static/media/motricidad.jpg": "/JoyApp/static/media/motricidad.5abd2d83b70c3642361b.jpg",
+    "static/media/slick.svg": "/JoyApp/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/JoyApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/JoyApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/JoyApp/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/JoyApp/index.html",
+    "main.8ab005e1.css.map": "/JoyApp/static/css/main.8ab005e1.css.map",
+    "main.858ac69d.js.map": "/JoyApp/static/js/main.858ac69d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ab005e1.css",
+    "static/js/main.858ac69d.js"
+  ]
+}
