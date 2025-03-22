@@ -12,6 +12,17 @@ import video5 from "../assets/FUTURISTAS4.mp4";
 import video6 from "../assets/FUTURISTAS5.mp4";
 import BackgroundSVG from "../assets/wave.svg";
 
+// Colores de bordes
+const videoBorderColors = [
+  "#1789C8", "#E71551", "#F2911B", "#E62A30", "#B9BDA7", "#F0F8F0"
+];
+
+// Función para obtener un color aleatorio de la lista
+const getRandomBorderColor = () => {
+  const randomIndex = Math.floor(Math.random() * videoBorderColors.length);
+  return videoBorderColors[randomIndex];
+};
+
 const phoneNumber = "+573014168993";
 
 const Home = () => {
@@ -38,7 +49,8 @@ const Home = () => {
         >
           {/* Videos para pantallas pequeñas */}
           <div 
-            className="md:hidden w-full h-60 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-2 hover:rotate-0"
+            className="md:hidden w-full h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video1} type="video/mp4" />
@@ -46,7 +58,8 @@ const Home = () => {
             </video>
           </div>
           <div 
-            className="md:hidden w-full h-60 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-3 hover:rotate-0"
+            className="md:hidden w-full h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video6} type="video/mp4" />
@@ -54,7 +67,8 @@ const Home = () => {
             </video>
           </div>
           <div 
-            className="md:hidden w-full h-60 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-3 hover:rotate-0"
+            className="md:hidden w-full h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video5} type="video/mp4" />
@@ -64,7 +78,8 @@ const Home = () => {
 
           {/* Videos para pantallas grandes */}
           <div 
-            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-2 hover:rotate-0"
+            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 rotate-2 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video1} type="video/mp4" />
@@ -72,7 +87,8 @@ const Home = () => {
             </video>
           </div>
           <div 
-            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-3 hover:rotate-0"
+            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 rotate-3 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video2} type="video/mp4" />
@@ -80,7 +96,8 @@ const Home = () => {
             </video>
           </div>
           <div 
-            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-1 hover:rotate-0"
+            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 rotate-1 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video3} type="video/mp4" />
@@ -88,7 +105,8 @@ const Home = () => {
             </video>
           </div>
           <div 
-            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-4 hover:rotate-0"
+            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 rotate-4 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video4} type="video/mp4" />
@@ -96,7 +114,8 @@ const Home = () => {
             </video>
           </div>
           <div 
-            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-5 hover:rotate-0"
+            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 rotate-5 hover:rotate-0"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video5} type="video/mp4" />
@@ -104,7 +123,8 @@ const Home = () => {
             </video>
           </div>
           <div 
-            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-4 hover:rotate-8"
+            className="hidden md:block w-full h-32 md:h-40 xl:h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 rotate-4 hover:rotate-8"
+            style={{ border: `4px solid ${getRandomBorderColor()}` }}
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video6} type="video/mp4" />
