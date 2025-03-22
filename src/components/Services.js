@@ -1,16 +1,16 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import mallImage from "../assets/centros.jpg";
-import emprende from "../assets/emprendedores.jpg";
-import ventos from "../assets/eventos.jpg";
+import mallImage from "../assets/centros1.jpg";
+import emprende from "../assets/emprendedores1.jpg";
+import ventos from "../assets/fechas1.jpg";
 import BackgroundSVG from "../assets/wave.svg";
 
-const phoneNumber = "+573046136840";
+const phoneNumber = "+573014168993";
 
 const services = [
   {
     title: "Centros Comerciales",
-    description: "Con nuestras herramientas, podrás ofrecer a tus visitantes una experiencia única, aumentar el flujo de personas y mejorar el tiempo de permanencia, todo mientras transformas tu espacio en un referente en innovación.",
+    description: "Los centros comerciales de hoy deben ofrecer algo más que compras: deben brindar experiencias memorables. Nuestros equipos tecnológicos crean un ambiente innovador que atrae visitantes, aumenta su tiempo de permanencia y mejora la experiencia del cliente.",
     image: mallImage,
     benefits: [
       "Mayor afluencia de visitantes.",
@@ -21,7 +21,7 @@ const services = [
   },
   {
     title: "Para Emprendedores",
-    description: "Aprovecha las herramientas tecnológicas más avanzadas para ofrecer experiencias interactivas que cautiven a los clientes. Con este enfoque innovador, podrás crear una fuente de ingresos constante y fortalecer tu presencia en el mercado.",
+    description: "¿Buscas una oportunidad de negocio rentable y con alta demanda? Con JOY para Emprendedores, puedes alquilar nuestros equipos tecnológicos y generar ingresos pasivos en un sector en constante crecimiento. Te brindamos todo el respaldo y asesoría para que conviertas tu pasión en un negocio exitoso.",
     image: emprende,
     benefits: [
       "Oportunidad de negocio con tecnología innovadora.",
@@ -32,7 +32,7 @@ const services = [
   },
   {
     title: "Eventos Especiales",
-    description: "Transforma cada evento en una experiencia inolvidable utilizando herramientas innovadoras que capturan la atención y crean un ambiente interactivo, asegurando que cada detalle quede grabado en la memoria de los asistentes.",
+    description: "Dale un toque único a tu evento con nuestras soluciones tecnológicas interactivas. Ya sea una feria, festival, evento corporativo o lanzamiento de marca, nuestros equipos garantizan un impacto visual inolvidable y una experiencia innovadora para los asistentes.",
     image: ventos,
     benefits: [
       "Impacto visual y experiencia única.",
@@ -100,7 +100,7 @@ const Services = () => {
                 className="w-full h-32 object-cover rounded-xl" // Imagen con bordes redondeados
               />
             </div>
-            <div className="p-4 flex flex-col flex-grow">
+            <div className="p-3 flex flex-col flex-grow">
               <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
               <p className="text-sm mt-2 text-gray-600">{service.description}</p>
               <ul className="mt-3 space-y-1 text-sm text-gray-800">

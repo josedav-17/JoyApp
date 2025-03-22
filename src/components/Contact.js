@@ -1,22 +1,81 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const message = `
+      *Requiero Informaciòn* 📩
+
+      *Nombre*: ${formData.name}
+      *Correo*: ${formData.email}
+      *Mensaje*: ${formData.message}
+    `;
+
+
+    const encodedMessage = encodeURIComponent(message);
+    const phoneNumber = '+573014168993';
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappLink, '_blank');
+  };
+
   return (
-    <section id="contact" className="min-h-screen flex flex-col justify-center items-center text-gray-900 scroll-mt-20">
+    <section id="contact" className="min-h-screen py-11 flex flex-col justify-center items-center text-gray-900 scroll-mt-10">
       <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-8">Contáctanos</h2>
 
       <div className="w-full max-w-4xl bg-gray-800 p-6 shadow-lg flex flex-col md:flex-row gap-10 sm:rounded-none md:rounded-lg">
         {/* Formulario */}
         <div className="w-full md:w-1/2">
-          <form className="flex flex-col">
+          <form className="flex flex-col" onSubmit={handleSubmit}>
             <label className="mb-2 font-semibold text-white" htmlFor="name">Nombre:</label>
-            <input className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none" type="text" id="name" placeholder="Tu nombre" required />
+            <input
+              className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none"
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Tu nombre"
+              required
+            />
 
             <label className="mb-2 font-semibold text-white" htmlFor="email">Correo Electrónico:</label>
-            <input className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none" type="email" id="email" placeholder="Tu correo" required />
+            <input
+              className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none"
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Tu correo"
+              required
+            />
 
             <label className="mb-2 font-semibold text-white" htmlFor="message">Mensaje:</label>
-            <textarea className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none" id="message" rows="4" placeholder="Tu mensaje" required></textarea>
+            <textarea
+              className="p-3 mb-4 rounded bg-gray-700 text-white border border-gray-600 focus:border-yellow-400 focus:outline-none"
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="4"
+              placeholder="Tu mensaje"
+              required
+            ></textarea>
 
             <button className="bg-yellow-500 text-white font-bold px-4 py-3 rounded transition duration-300 hover:bg-yellow-600">
               Enviar

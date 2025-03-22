@@ -7,12 +7,12 @@ import Contact from "./Contact";
 import video1 from "../assets/FUTURISTAS.mp4";
 import video2 from "../assets/FUTURISTAS1.mp4";
 import video3 from "../assets/FUTURISTAS2.mp4";
-import video4 from "../assets/FUTURISTAS.mp4";
-import video5 from "../assets/FUTURISTAS1.mp4";
-import video6 from "../assets/FUTURISTAS2.mp4";
+import video4 from "../assets/FUTURISTAS3.mp4";
+import video5 from "../assets/FUTURISTAS4.mp4";
+import video6 from "../assets/FUTURISTAS5.mp4";
 import BackgroundSVG from "../assets/wave.svg";
 
-const phoneNumber = "1234567890";
+const phoneNumber = "+573014168993";
 
 const Home = () => {
   const handleWhatsApp = () => {
@@ -50,6 +50,14 @@ const Home = () => {
           >
             <video autoPlay loop muted playsInline className="w-full h-full object-cover">
               <source src={video6} type="video/mp4" />
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div 
+            className="md:hidden w-full h-60 overflow-hidden rounded-xl shadow-lg border-4 transform transition duration-500 rotate-3 hover:rotate-0"
+          >
+            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+              <source src={video5} type="video/mp4" />
               Tu navegador no soporta videos.
             </video>
           </div>

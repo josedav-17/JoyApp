@@ -9,7 +9,7 @@ const Header = () => {
   const [animate, setAnimate] = useState(false);
 
   const messages = [
-    "📞 Contáctanos al +1234567890",
+    "📞 Contáctanos al +57 3014168993",
     "💼 Ventas al por mayor y al detal",
     "⚡ Servicio rápido y confiable"
   ];
@@ -97,12 +97,12 @@ const Header = () => {
 
       {/* Menú desplegable en móviles */}
       {isOpen && (
-        <div className="md:hidden bg-[#3DD1F2] shadow-lg p-4 w-full text-center">
+        <div className="md:hidden bg-[#0BB3D9] shadow-lg p-4 w-full text-center">
           {[
             { href: "", icon: <FaHome />, text: "Inicio" },
-            { href: "#about", icon: <FaInfoCircle />, text: "Sobre Nosotros" },
             { href: "#services", icon: <FaTools />, text: "Servicios" },
             { href: "#benefits", icon: <FaGift />, text: "Beneficios" },
+            { href: "#about", icon: <FaInfoCircle />, text: "Sobre Nosotros" },
             { href: "#contact", icon: <FaEnvelope />, text: "Contacto" }
           ].map(({ href, icon, text }) => (
             <a key={href} href={href} onClick={handleLinkClick} className="block py-2 mb-2 text-white bg-[#178ACD] rounded-full px-4 flex items-center justify-center gap-2">

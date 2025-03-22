@@ -5,6 +5,7 @@ import turismo from "../assets/turismo1.jpg";
 import familia from "../assets/familia.jpg"; 
 import parejas from "../assets/parejas.jpg"; 
 import recrea from "../assets/recreacion.jpg"; 
+import motricidad from "../assets/motricidad.jpg"; 
 
 const benefits = [
   {
@@ -35,7 +36,7 @@ const benefits = [
     title: "Desarrollo de la Motricidad en Niños",
     description: "Estimula la motricidad gruesa y fina con actividades interactivas.",
     impact: "🧠 Mejor coordinación y estimulación temprana.",
-    image: "/images/benefit5.jpg",
+    image: motricidad,
   },
   {
     title: "Recreación Sana para Parejas",
@@ -108,7 +109,7 @@ const Benefits = () => {
             <img
               src={benefit.image}
               alt={benefit.title}
-              className="w-full h-40 md:h-44 object-cover rounded-lg mb-2"
+              className="w-full h-50 md:h-50 object-cover rounded-lg mb-2"
             />
             <h3 className="text-lg font-semibold text-[#333]">{benefit.title}</h3>
             <p className="mt-2 text-sm text-gray-600 flex-1 leading-tight">{benefit.description}</p>
