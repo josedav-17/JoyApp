@@ -65,7 +65,7 @@ const Header = () => {
           
           {/* Slogan alineado a la derecha en PC */}
           <div className="hidden md:block text-lg font-bold italic text-white">
-            ✨ Tecnología que despierta alegrías ✨
+            ✨ Tecnología que despierta alegría ✨
           </div>
         </div>
 
@@ -75,9 +75,9 @@ const Header = () => {
         </button>
 
         {/* Slogan en móviles (bajo el logo) */}
-        <div className="md:hidden text-lg font-bold italic text-white text-center mt-2">
-          ✨ Tecnología que despierta alegrías ✨
-        </div>
+        <div className="md:hidden bg-red-600 py-2 px-4 text-lg font-bold italic text-white text-center mt-2 whitespace-nowrap">
+  ✨ Tecnología que despierta alegría ✨
+</div>
 
         {/* Menú en escritorio */}
         <nav className="hidden md:flex space-x-4">
@@ -88,7 +88,7 @@ const Header = () => {
             { href: "#about", icon: <FaInfoCircle />, text: "Sobre Nosotros" },
             { href: "#contact", icon: <FaEnvelope />, text: "Contacto" }
           ].map(({ href, icon, text }) => (
-            <a key={href} href={href} onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#178ACD] rounded-full font-semibold shadow-md hover:bg-[#3DD1F2] hover:text-white transition-all">
+            <a key={href} href={href} onClick={handleLinkClick} className="flex items-center gap-2 px-4 py-2 bg-white text-[#178ACD] rounded-full font-semibold shadow-md hover:bg-[#178ACD] hover:text-white transition-all">
               {icon} {text}
             </a>
           ))}

@@ -14,7 +14,7 @@ import BackgroundSVG from "../assets/wave.svg";
 
 // Colores de bordes
 const videoBorderColors = [
-  "#1789C8", "#E71551", "#F2911B", "#E62A30", "#B9BDA7", "#F0F8F0"
+  "#1789C8", "#E71551", "#F2911B", "#E62A30", "#F2A81D", "#3DD1F2", "#D91A73", "#F2A81D", "#3DD1F2", "#D91A73"
 ];
 
 // Función para obtener un color aleatorio de la lista

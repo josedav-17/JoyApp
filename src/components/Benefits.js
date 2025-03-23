@@ -87,7 +87,7 @@ const Benefits = () => {
 
   return (
 <section id="benefits" className="flex flex-col scroll-mt-10 justify-center py-8 min-h-[100vh] items-center text-gray-900">
-  <h2 className="text-3xl font-extrabold text-center text-[#3DD1F2]">
+  <h2 className="text-3xl font-extrabold text-center text-[#178ACD]">
     Beneficios de Nuestros Servicios
   </h2>
 
