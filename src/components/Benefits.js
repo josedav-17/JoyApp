@@ -105,15 +105,16 @@ const Benefits = () => {
     >
       {benefits.map((benefit, index) => (
         <div key={index} className="p-2">
-          <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] min-h-[380px] md:min-h-[420px] lg:min-h-[460px]">
+          <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02] h-full min-h-[430px]
+          ">
             <img
               src={benefit.image}
               alt={benefit.title}
-              className="w-full h-50 md:h-50 object-cover rounded-lg mb-2"
+              className="w-full h-[200px] md:h-[250px] object-cover rounded-lg mb-2"
             />
-            <h3 className="text-lg font-semibold text-[#333]">{benefit.title}</h3>
-            <p className="mt-2 text-sm text-gray-600 flex-1 leading-tight">{benefit.description}</p>
-            <p className="mt-3 font-medium text-[#F2A81D]">{benefit.impact}</p>
+            <h3 className="text-lg font-semibold text-[#333] leading-relaxed">{benefit.title}</h3>
+            <p className="mt-2 text-sm text-gray-600 flex-1 leading-tight leading-relaxed">{benefit.description}</p>
+            <p className="mt-3 font-medium text-[#F2A81D] leading-relaxed">{benefit.impact}</p>
           </div>
         </div>
       ))}

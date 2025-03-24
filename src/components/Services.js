@@ -20,7 +20,7 @@ const services = [
     buttonText: "Descubre más",
   },
   {
-    title: "Joy ara Emprendedores",
+    title: "Joy para Emprendedores",
     description: "¿Buscas una oportunidad de negocio rentable y con alta demanda? Con JOY para Emprendedores, puedes alquilar nuestros equipos tecnológicos y generar ingresos pasivos en un sector en constante crecimiento. Te brindamos todo el respaldo y asesoría para que conviertas tu pasión en un negocio exitoso.",
     image: emprende,
     benefits: [

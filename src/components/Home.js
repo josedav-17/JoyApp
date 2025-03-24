@@ -10,7 +10,7 @@ import video3 from "../assets/FUTURISTAS2.mp4";
 import video4 from "../assets/FUTURISTAS3.mp4";
 import video5 from "../assets/FUTURISTAS4.mp4";
 import video6 from "../assets/FUTURISTAS5.mp4";
-import BackgroundSVG from "../assets/wave.svg";
+
 
 // Colores de bordes
 const videoBorderColors = [
@@ -33,15 +33,10 @@ const Home = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-white" >
       {/* Sección de Inicio */}
       <div 
         className="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-40"
-        style={{
-          backgroundImage: `url(${BackgroundSVG})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
         {/* Collage de Videos */}
         <div 
