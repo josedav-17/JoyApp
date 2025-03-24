@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize("G-HC4N5337BV"); // Reemplaza con tu ID real
+    ReactGA.initialize("G-HC4N5337BV");
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
 
