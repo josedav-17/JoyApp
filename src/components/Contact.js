@@ -7,9 +7,6 @@ const Contact = () => {
     message: ''
   });
 
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(null);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -18,31 +15,21 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    setSuccess(null);
 
-    try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const message = `
+      *Requiero mas informaciòn sobre sus servicios y productos* 📩
+      Nombre: ${formData.name}
+      Correo: ${formData.email}
+      Mensaje: ${formData.message}
+    `;
 
-      const result = await response.json();
-      if (result.success) {
-        setSuccess(true);
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setSuccess(false);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setSuccess(false);
-    } finally {
-      setLoading(false);
-    }
+
+    const encodedMessage = encodeURIComponent(message);
+    const phoneNumber = '+573014168993';
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappLink, '_blank');
   };
 
   return (
@@ -89,26 +76,15 @@ const Contact = () => {
               required
             ></textarea>
 
-            <button
-              type="submit"
-              className="bg-yellow-500 text-white font-bold px-4 py-3 rounded transition duration-300 hover:bg-yellow-600"
-              disabled={loading}
-            >
-              {loading ? "Enviando..." : "Enviar"}
+            <button className="bg-yellow-500 text-white font-bold px-4 py-3 rounded transition duration-300 hover:bg-yellow-600">
+              Enviar
             </button>
-
-            {success === true && (
-              <p className="mt-4 text-green-400">✅ Mensaje enviado correctamente</p>
-            )}
-            {success === false && (
-              <p className="mt-4 text-red-400">❌ Hubo un error al enviar el mensaje</p>
-            )}
-      </form>
+          </form>
         </div>
 
         {/* Google Maps */}
         <div className="w-full md:w-1/2">
-          <h3 className="text-lg font-bold mb-2 text-yellow-400">Donde estamos ubicados?</h3>
+          <h3 className="text-lg font-bold mb-2 text-yellow-400">Nuestra Ubicación</h3>
           <div className="w-full h-64 overflow-hidden shadow-lg sm:rounded-none md:rounded-lg">
             <iframe
               title="Ubicación"
@@ -119,7 +95,7 @@ const Contact = () => {
             ></iframe>
           </div>
         </div>
-    </div>
+      </div>
     </section>
   );
 };
