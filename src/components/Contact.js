@@ -89,7 +89,7 @@ const Contact = () => {
             <iframe
               title="Ubicación"
               className="w-full h-full border-0"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.95565151531678!3d-37.81732797975192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5779ff1d51b1a99!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1619162220901!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7178.7981771944715!2d-75.55423592552118!3d6.20885222674085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428202e23e98d%3A0xd2b20ae339c402f!2sCl%2010A%20%23%2010-190%2C%20El%20Poblado%2C%20Medell%C3%ADn%2C%20El%20Poblado%2C%20Medell%C3%ADn%2C%20Antioquia%2C%20Colombia!5e1!3m2!1ses-419!2sus!4v1743123782224!5m2!1ses-419!2sus"
               allowFullScreen
               loading="lazy"
             ></iframe>

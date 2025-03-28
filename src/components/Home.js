@@ -43,33 +43,24 @@ const Home = () => {
           className="relative w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 xl:gap-14 px-6"
         >
           {/* Videos para pantallas pequeñas */}
-          <div 
-            className="md:hidden w-full h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 hover:rotate-0"
-            style={{ border: `4px solid ${getRandomBorderColor()}` }}
-          >
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-              <source src={video1} type="video/mp4" />
-              Tu navegador no soporta videos.
-            </video>
-          </div>
-          <div 
-            className="md:hidden w-full h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 hover:rotate-0"
-            style={{ border: `4px solid ${getRandomBorderColor()}` }}
-          >
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-              <source src={video6} type="video/mp4" />
-              Tu navegador no soporta videos.
-            </video>
-          </div>
-          <div 
-            className="md:hidden w-full h-48 overflow-hidden rounded-xl shadow-lg transform transition duration-500 hover:rotate-0"
-            style={{ border: `4px solid ${getRandomBorderColor()}` }}
-          >
-            <video autoPlay loop muted playsInline className="w-full h-full object-cover">
-              <source src={video5} type="video/mp4" />
-              Tu navegador no soporta videos.
-            </video>
-          </div>
+          <div className="md:hidden w-full aspect-video overflow-hidden rounded-xl shadow-lg" 
+           style={{ border: `4px solid ${getRandomBorderColor()}` }}>
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+          <source src={video1} type="video/mp4" />
+        </video>
+      </div>
+      <div className="md:hidden w-full aspect-video overflow-hidden rounded-xl shadow-lg" 
+           style={{ border: `4px solid ${getRandomBorderColor()}` }}>
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+          <source src={video6} type="video/mp4" />
+        </video>
+      </div>
+      <div className="md:hidden w-full aspect-video overflow-hidden rounded-xl shadow-lg" 
+           style={{ border: `4px solid ${getRandomBorderColor()}` }}>
+        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+          <source src={video5} type="video/mp4" />
+        </video>
+      </div>
 
           {/* Videos para pantallas grandes */}
           <div 
